@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <p><a href="/">Back to Homepage</a></p>
+    <table>
+        <tr>
+            <td>Method</td>
+            <td>Count</td>
+        </tr>
+        {%  for method in counter %}
+        <tr>
+            <td>{{ method }}</td>
+            <td>{{ counter[method]}}</td>
+        </tr>
+        {%  endfor %}
+    </table>
+</body>
+</html>
